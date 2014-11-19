@@ -537,6 +537,8 @@ function average(data){
 		$("#spinnery input").spinner("value", 1);
 		$("#slidery").slider("value", 1);
 		$("#spinnery input").spinner("value", 1);
+			equation_reference = MathJax.Hub.getAllJax("equation")[0];
+					MathJax.Hub.Queue(["Text", equation_reference, "y^{("+ypower[ypower.length-1]+")}=" + betas[0].toFixed(4) +"x^{(" + xpower[xpower.length-1] + ")} + " + betas[1].toFixed(4) + "+ \\epsilon"]);
 	}
 	
 		
@@ -940,9 +942,6 @@ function average(data){
 	$(function() {
 
 				initialize(data);
-				
-				MathJax.Hub.Queue(["Text", equation_reference, "y^{("+ypower[ypower.length-1]+")}=" + betas[0].toFixed(4) +"x^{(" + xpower[xpower.length-1] + ")} +" + betas[1].toFixed(4) + "+ \\epsilon"]);
-				
 				buildPlots();
 
 				$("#csv").change(handleFileSelect);
