@@ -401,7 +401,18 @@ function average(data){
 									columns: [_x, residuals, excluded],
 									type: 'scatter',
 								});
-														realresidPlot.load({
+														realdataPlot.load({
+							xs: {
+								observations: '_x0',
+								model: '_x0'
+							},
+							columns: [_x0, observations, model],
+							types: {
+								observations: 'scatter',
+								model: 'spline'
+							},
+						});
+						realresidPlot.load({
 							xs: {
 								errors: '_x0',
 							},
@@ -410,15 +421,8 @@ function average(data){
 								errors: 'scatter',
 							},
 						});
-						residPlot.load({
-							xs: {
-								excluded: '_x',
-								residuals: '_x',
-							},
-							columns: [_x, residuals, excluded],
-							type: 'scatter',
-						});
-														r2yPlot.load({
+								
+							r2yPlot.load({
 							xs: {
 								R2: '_ypower',
 									},
