@@ -328,8 +328,9 @@ function average(data){
 		xpower = [1];
 		ypower = [1];
 		ols();
-					equation_reference = MathJax.Hub.getAllJax("equation")[0];
-					MathJax.Hub.Queue(["Text", equation_reference, "y^{("+ypower[ypower.length-1]+")}=" + betas[0].toFixed(4) +"x^{(" + xpower[xpower.length-1] + ")} + " + betas[1].toFixed(4) + "+ \\epsilon"]);
+		equation_reference = MathJax.Hub.getAllJax("equation")[0];
+		console.log(equation_reference);
+		MathJax.Hub.Queue(["Text", equation_reference, "y^{("+ypower[ypower.length-1]+")}=" + betas[0].toFixed(4) +"x^{(" + xpower[xpower.length-1] + ")} + " + betas[1].toFixed(4) + "+ \\epsilon"]);
 		r2s = [r2];
 	}
 	
