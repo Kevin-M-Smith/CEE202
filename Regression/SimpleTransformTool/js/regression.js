@@ -129,7 +129,7 @@ function average(data){
 		var _ex = 1/(ypower[ypower.length-1]); 
 		var _yhat = yhat;
 		var _zeros = makeArrayOf(0, data.length);
-		var _negative = numeric.lt(yhat, zeros);
+		var _negative = numeric.lt(yhat, _zeros);
 		for(var i = 0; i < data.length; i++){
 			if(_negative[i]){
 				_yhat[i] = 0; 
