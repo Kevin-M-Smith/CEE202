@@ -127,7 +127,7 @@ function average(data){
 		mse = sse / (data.length);
 		
 		var _ex = 1/(ypower[ypower.length-1]); 
-		_yhatz = yhat;
+		_yhatz = numeric.clone(yhat)
 		var _zeros = makeArrayOf(0, data.length);
 		var _negative = numeric.lt(yhat, _zeros);
 		for(var i = 0; i < data.length; i++){
