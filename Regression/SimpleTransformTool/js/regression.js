@@ -127,15 +127,15 @@ function average(data){
 		mse = sse / (data.length);
 		
 		var _ex = 1/(ypower[ypower.length-1]); 
-		var _yhat = yhat;
+		var _yhatz = yhat;
 		var _zeros = makeArrayOf(0, data.length);
 		var _negative = numeric.lt(yhat, _zeros);
 		for(var i = 0; i < data.length; i++){
 			if(_negative[i]){
-				_yhat[i] = 0; 
+				_yhatz[i] = 0; 
 			}
 		}
-		yhatreal = numeric.pow(_yhat, _ex);
+		yhatreal = numeric.pow(_yhatz, _ex);
 		realresiduals = numeric.sub(yhatreal, y0);
 		var _realssm = numeric.sub(yhatreal, y0bars);
 		realssm = numeric.norm2Squared(_realssm);
