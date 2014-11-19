@@ -505,7 +505,9 @@ function average(data){
 			}
 		});
 		$("#sliderx").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 		$("#slidery").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 	}
 	
 		
@@ -523,7 +525,9 @@ function average(data){
 		initialize(data);
 		buildPlots();
 		$("#sliderx").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 		$("#slidery").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 	}
 	
 	function generateLinearOut(){
@@ -540,7 +544,9 @@ function average(data){
 		initialize(data);
 		buildPlots();
 		$("#sliderx").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 		$("#slidery").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 	}
 	
 	function generateExp(){
@@ -558,7 +564,9 @@ function average(data){
 		initialize(data);
 		buildPlots();
 		$("#sliderx").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 		$("#slidery").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 	}
 	
 	function generateNoise(){
@@ -575,7 +583,9 @@ function average(data){
 		initialize(data);
 		buildPlots();
 		$("#sliderx").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 		$("#slidery").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 	}
 
 	function generatex3(){
@@ -592,7 +602,9 @@ function average(data){
 		initialize(data);
 		buildPlots();
 		$("#sliderx").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 		$("#slidery").slider("value", 1);
+		$("#spinnery input").spinner("value", 1);
 	}
 	
 	function generateData(){
