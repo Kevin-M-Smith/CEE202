@@ -135,7 +135,7 @@ function average(data){
 				_yhat[i] = 0; 
 			}
 		}
-		yhatreal = numeric.pow(yhat, _ex);
+		yhatreal = numeric.pow(_yhat, _ex);
 		realresiduals = numeric.sub(yhatreal, y0);
 		var _realssm = numeric.sub(yhatreal, y0bars);
 		realssm = numeric.norm2Squared(_realssm);
