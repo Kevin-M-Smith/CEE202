@@ -127,6 +127,7 @@ function average(data){
 		mse = sse / (data.length);
 		
 		var _ex = 1/(ypower[ypower.length-1]); 
+		console.log(_ex);
 		yhatreal = numeric.pow(yhat, _ex);
 		realresiduals = numeric.sub(yhatreal, y0);
 		var _realssm = numeric.sub(yhatreal, y0bars);
