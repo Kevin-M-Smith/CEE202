@@ -1037,7 +1037,7 @@ function average(data){
 			equation_reference = MathJax.Hub.getAllJax("equation")[0];
 		console.log(equation_reference);
 		MathJax.Hub.Queue(["Text", equation_reference, "y^{("+ypower[ypower.length-1]+")}=" + betas[0].toFixed(4) +"x^{(" + xpower[xpower.length-1] + ")} + " + betas[1].toFixed(4) + "+ \\epsilon"]);
-		}, 1000);
+		}, 2000);
 			
 		});
 		
