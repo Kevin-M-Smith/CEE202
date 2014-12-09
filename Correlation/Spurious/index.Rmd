@@ -202,7 +202,7 @@ Now let us examine the relationship between the BMI and height of major league b
 
 &nbsp;&nbsp;&nbsp;&nbsp;$BMI=\frac{Weight}{Height^{2}}$ and so the spurious uncorrelation is of the form: <br><br> &nbsp;&nbsp;&nbsp;&nbsp;$\frac{X}{f(Y)}$ vs. $Y$.
 
-```{r}
+```{r, warning=FALSE}
 MLB.df$Height <- MLB[,1]
 
 colnames(MLB.df) <- c("Relative Weight (%)", "BMI (kg/m^{2})", "Height (in.)")

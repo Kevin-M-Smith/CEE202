@@ -224,42 +224,6 @@ gg <- gg + geom_point() + ggtitle(
 gg
 ```
 
-```
-## Warning in grid.Call(L_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on ' for Major Leage Baseball Players, ρ = -0.08' in
-## 'mbcsToSbcs': dot substituted for <cf>
-```
-
-```
-## Warning in grid.Call(L_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on ' for Major Leage Baseball Players, ρ = -0.08' in
-## 'mbcsToSbcs': dot substituted for <81>
-```
-
-```
-## Warning in grid.Call(L_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on ' for Major Leage Baseball Players, ρ = -0.08' in
-## 'mbcsToSbcs': dot substituted for <cf>
-```
-
-```
-## Warning in grid.Call(L_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on ' for Major Leage Baseball Players, ρ = -0.08' in
-## 'mbcsToSbcs': dot substituted for <81>
-```
-
-```
-## Warning in grid.Call.graphics(L_text, as.graphicsAnnot(x$label), x$x, x$y,
-## : conversion failure on ' for Major Leage Baseball Players, ρ = -0.08' in
-## 'mbcsToSbcs': dot substituted for <cf>
-```
-
-```
-## Warning in grid.Call.graphics(L_text, as.graphicsAnnot(x$label), x$x, x$y,
-## : conversion failure on ' for Major Leage Baseball Players, ρ = -0.08' in
-## 'mbcsToSbcs': dot substituted for <81>
-```
-
 ![](index_files/figure-html/unnamed-chunk-7-1.png) 
 
 ### Reflection Questions
