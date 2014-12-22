@@ -1,4 +1,4 @@
-# Vignette: Leaps and Bounds
+# Vignette: Regression Frontier
   
   
 
