@@ -127,7 +127,15 @@ function average(data){
 		mse = sse / (data.length);
 		
 		var _ex = 1/(ypower[ypower.length-1]); 
-		yhatreal = numeric.pow(yhat, _ex);
+		_yhatz = numeric.clone(yhat)
+		var _zeros = makeArrayOf(0, data.length);
+		var _negative = numeric.lt(yhat, _zeros);
+		for(var i = 0; i < data.length; i++){
+			if(_negative[i]){
+				_yhatz[i] = 0; 
+			}
+		}
+		yhatreal = numeric.pow(_yhatz, _ex);
 		realresiduals = numeric.sub(yhatreal, y0);
 		var _realssm = numeric.sub(yhatreal, y0bars);
 		realssm = numeric.norm2Squared(_realssm);
@@ -393,7 +401,28 @@ function average(data){
 									columns: [_x, residuals, excluded],
 									type: 'scatter',
 								});
-														r2yPlot.load({
+														realdataPlot.load({
+							xs: {
+								observations: '_x0',
+								model: '_x0'
+							},
+							columns: [_x0, observations, model],
+							types: {
+								observations: 'scatter',
+								model: 'spline'
+							},
+						});
+						realresidPlot.load({
+							xs: {
+								errors: '_x0',
+							},
+							columns: [_x0, errors],
+							types: {
+								errors: 'scatter',
+							},
+						});
+								
+							r2yPlot.load({
 							xs: {
 								R2: '_ypower',
 									},
@@ -1004,6 +1033,11 @@ function average(data){
 //		$( "#realdataPlot" ).resizable();
    			$( "#minicontrol" ).draggable();
 			
+			setTimeout(function(){
+			equation_reference = MathJax.Hub.getAllJax("equation")[0];
+		console.log(equation_reference);
+		MathJax.Hub.Queue(["Text", equation_reference, "y^{("+ypower[ypower.length-1]+")}=" + betas[0].toFixed(4) +"x^{(" + xpower[xpower.length-1] + ")} + " + betas[1].toFixed(4) + "+ \\epsilon"]);
+		}, 2000);
 			
 		});
 		
